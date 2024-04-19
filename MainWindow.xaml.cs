@@ -36,7 +36,7 @@ namespace WpfApp6
             dialog.ShowDialog();
 
         }
-        private void Dialog_Closing(object? sender, RoutedEventArgs e)
+        private void Dialog_Closing(object? sender, EventArgs e)
         {
             seznam.ItemsSource = null;
             seznam.ItemsSource = Zamestnanci;
@@ -45,16 +45,32 @@ namespace WpfApp6
 
         private void ShowButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Zamestnanec? info = seznam?.SelectedItem as Zamestnanec ?? new Zamestnanec(-1, "Nenalezený","Neznámy",DateTime.Now);
+            MessageBox.Show($"{info.Id} {info.Jmeno} {info.Prijmeni} {info.DatumNarozeni.ToShortDateString()}");
         }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
 
+            Zamestnanec? hledany = seznam?.SelectedItem as Zamestnanec;
+            if( hledany != null ) 
+            {
+            DialogEdit edit = new DialogEdit(hledany);
+                edit.Closing += Dialog_Closing;
+                edit.ShowDialog();
+            }
         }
 
         private void RemoveButton_Click(object sender, RoutedEventArgs e)
         {
+            Zamestnanec? hledany = seznam?.SelectedItem as Zamestnanec ?? new Zamestnanec(-1, "Nenalezený", "Neznámy", DateTime.Now);
+            MessageBoxResult volba = MessageBox.Show($"Odebrat {hledany.Jmeno}? ", "Odebrat", MessageBoxButton.YesNo);
+            if ( volba == MessageBoxResult.Yes )
+            {
+                Zamestnanci.Remove(hledany);
+                seznam.ItemsSource = null;
+                seznam.ItemsSource = Zamestnanci;
+            }
 
         }
     }

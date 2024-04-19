@@ -7,43 +7,43 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+
         <ListBox 
             x:Name="seznam"
             Width="300" 
                  Height="300" 
-                 Margin="50,67,450,0" 
-                 VerticalAlignment="Top" 
+                 Margin="50,0,0,0" 
+                 VerticalAlignment="Center" HorizontalAlignment="Left" 
                  
                  />
         <Button Width="70"
                 Height="30"
                 Content="Přidat" 
                 Background="LightBlue" 
-                Margin="491,67,239,337" 
-                Click="AddButton_Click"/>
-        
+                Margin="491,67,0,0" 
+                Click="AddButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
         <Button Width="70"
                 Height="30"
                 Content="Zobrazit" 
                 Background="LightBlue" 
-                Margin="491,146,239,258"
-                Click="ShowButton_Click"/>
-        
+                Margin="491,146,0,0"
+                Click="ShowButton_Click" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+
         <Button Width="70"
                 Height="30"
                 Content="Editovat" 
                 Background="LightBlue" 
-                Margin="491,237,239,167"
-                Click="EditButton_Click"/>
-        
+                Margin="491,237,0,0"
+                Click="EditButton_Click" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+
         <Button Width="70"
                 Height="30"
                 Content="Smazat" 
                 Background="LightBlue" 
-                Margin="491,337,239,67"
-                Click="RemoveButton_Click"/>
-                
+                Margin="491,337,0,0"
+                Click="RemoveButton_Click" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+
 
     </Grid>
 </Window>
