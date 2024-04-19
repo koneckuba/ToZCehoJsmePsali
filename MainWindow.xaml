@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfApp6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp6"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        
+        <ListBox 
+            x:Name="seznam"
+            Width="300" 
+                 Height="300" 
+                 Margin="50,67,450,0" 
+                 VerticalAlignment="Top" 
+                 
+                 />
+        <Button Width="70"
+                Height="30"
+                Content="Přidat" 
+                Background="LightBlue" 
+                Margin="491,67,239,337" 
+                Click="AddButton_Click"/>
+        
+        <Button Width="70"
+                Height="30"
+                Content="Zobrazit" 
+                Background="LightBlue" 
+                Margin="491,146,239,258"
+                Click="ShowButton_Click"/>
+        
+        <Button Width="70"
+                Height="30"
+                Content="Editovat" 
+                Background="LightBlue" 
+                Margin="491,237,239,167"
+                Click="EditButton_Click"/>
+        
+        <Button Width="70"
+                Height="30"
+                Content="Smazat" 
+                Background="LightBlue" 
+                Margin="491,337,239,67"
+                Click="RemoveButton_Click"/>
+                
+
+    </Grid>
+</Window>

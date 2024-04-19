@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApp6.Okna.DialogPridat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp6.Okna"
+        mc:Ignorable="d"
+        Title="DialogPridat" Height="210" Width="300">
+    <Grid Background="Bisque">
+        <Label Background="White" Content="Jmeno:" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top"/>
+        <TextBox Background="White" x:Name="jmenoTextBox" HorizontalAlignment="Left" Margin="100,30,0,0" VerticalAlignment="Top" Width="150"/>
+
+        <Label Background="White" Content="Prijmeni:" HorizontalAlignment="Left" Margin="30,70,0,0" VerticalAlignment="Top"/>
+        <TextBox Background="White" x:Name="prijmeniTextBox" HorizontalAlignment="Left" Margin="100,70,0,0" VerticalAlignment="Top" Width="150"/>
+
+        <Label Background="White" Content="Datum:" HorizontalAlignment="Left" Margin="30,110,0,0" VerticalAlignment="Top"/>
+        <DatePicker Background="White" x:Name="datePicker" HorizontalAlignment="Left" Margin="100,110,0,0" VerticalAlignment="Top" Width="150"/>
+
+        <Button Background="White" Content="Přidat" HorizontalAlignment="Left" Margin="50,150,0,0" VerticalAlignment="Top" Width="100" Click="AddButton_Click"/>
+        <Button Background="White" Content="Zrušit" HorizontalAlignment="Left" Margin="150,150,0,0" VerticalAlignment="Top" Width="100" Click="CancelButton_Click"/>
+    </Grid>
+</Window>
